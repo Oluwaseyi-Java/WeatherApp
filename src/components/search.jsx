@@ -1,10 +1,16 @@
 import React from 'react'
-import close from "./image/close.png"
+import searchIcon from "./image/search.png"
 
 const search = () => {
   return (
     <div className='search'>
-        <input type="text" placeholder="Search"/>
+    <div className='search-wrapper'>
+        <input className='input' type="text" placeholder="Search"/>
+        <div className='search-img'>
+            <img alt='search' src={searchIcon}/>
+        </div>
+    
+    </div>
     </div>
   )
 }
