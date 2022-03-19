@@ -26,12 +26,17 @@ const WeatherCard = (props) => {
           <h1 id='temp'>{props.main.temp ? temp() : ""}<sup>o</sup>C</h1>
           <div className='values'>
             <div className='temp'>
-            <p>{props.main.temp_min ? temp_min() : ""}<sup>o</sup>C</p>
-            <p>{props.main.temp_max ? temp_max() : ""}<sup>o</sup>C</p> 
+              <span>Min-temperature</span><br/>
+              <span>{props.main.temp_min ? temp_min() : ""}<sup>o</sup>C</span><br/><br/>
+              <span>Max-temperature</span><br/>
+              <span>{props.main.temp_max ? temp_max() : ""}<sup>o</sup>C</span> 
               </div>
             <div className='physics'>
-            <p>{props.main.pressure}</p>
-            <p>{props.main.humidity}</p>
+              <span>Pressure</span><br/>
+              <span>{props.main.pressure}</span><br/><br/>
+              <span>Humidity</span><br/>
+              <span>{props.main.humidity}</span>
+            
             </div>
           </div>
           
@@ -39,12 +44,13 @@ const WeatherCard = (props) => {
         </div>
         <div className='dataDescription'>
             <div className='weather'>
-              <p>{props.weather.main}</p>  
-              <p>{props.weather.description}</p>
+              <span>Weather Description</span><br/>
+          <span id='Weather-Description'>{props.weather.main}: {props.weather.description}</span>
 
             </div>
             <div className='speed'>
-              <p>{props.wind.speed}</p>
+            <span>Wind speed</span><br/>
+              <span>{props.wind.speed}</span>
             </div>
           </div>
       </div>
