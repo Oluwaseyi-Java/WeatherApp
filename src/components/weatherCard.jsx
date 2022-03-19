@@ -12,12 +12,11 @@ const WeatherCard = (props) => {
     return Math.floor(`${(props.main.temp_max) -273.15}`)
   }
  
-  
-      // <p>{props.messageSent}</p>    
-      
+
 
   return (
-      <div className='weatherCard'>
+    <>
+      {props.data.id ?<div className='weatherCard'>
         <div className='cardHeader'>
           <span id='count'>{props.country.country}</span> 
           <p id='state'>{props.data.name}</p> 
@@ -53,8 +52,9 @@ const WeatherCard = (props) => {
               <span>{props.wind.speed}</span>
             </div>
           </div>
-      </div>
+      </div>:<p className='message'>{props.messageSent}</p> }
 
+      </>
   )
 }
 

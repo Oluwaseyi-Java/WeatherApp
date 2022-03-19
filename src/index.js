@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { 
+  BrowserRouter,
+  Routes,
+  Route,
+ } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Developer from './components/developer';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Routes>
+      <Route exact path='/' element={<App />}/>
+      <Route path='/developer' element={<Developer/>}/>
+  </Routes>
+    
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
