@@ -66,10 +66,65 @@
   }
 
   .weatherCard{
-    height: 300px;
+    min-height: 300px;
     width: 60%;
     border: 1px solid #c3c3c4;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
   }
+
+  .cardHeader{
+    background-color: #282c34;
+    color: orange;
+    min-height: 50px;
+    border-top: 1px solid black;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+  }
+  .cardHeader #count{
+    padding: 0 0 0 10px;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .cardHeader #state{
+    padding: 0 0 10px 10px;
+    margin-top: 0;
+  }
+  .temp-con{
+    border-bottom: 1px solid #dcdddf;
+  }
+  .temp-con #temp{
+    font-size: 50px;
+    text-align: center;
+    color: #282c34;
+  }
+   .values{
+     display: flex;
+   }
+  .values .temp{
+    border: 1px solid #dcdddf;
+    padding: 0 0 0 10px;
+    min-height: 30px;
+    width: 50%;
+  }
+  .values .physics{
+    width: 50%;
+    min-height: 30px;
+    padding: 0 0 0 10px;
+    
+    border: 1px solid #dcdddf;
+  }
+  .dataDescription{
+    display: flex;
+  }
+  .dataDescription .weather{
+     padding: 0 0 0 10px;
+     width: 50%;
+     border-right: 1px solid #dcdddf;
+    }
+  .dataDescription .speed{
+      width: 50%;
+      padding: 0 0 0 10px;
+      border-left: 1px solid #dcdddf;
+   }
